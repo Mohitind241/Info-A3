@@ -1,0 +1,243 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="EcommerceApp" id="ecom">
+    <mxGraphModel dx="1422" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="900" height="1150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="topLine" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2937;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="900" height="4" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="title" value="EcommerceApp  —  CI/CD Pipeline Architecture" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#1F2937;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="50" y="30" width="800" height="35" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="titleLine" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2937;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="380" y="72" width="140" height="2" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sub" value="Three Virtual Machine Deployment Setup using Jenkins, SonarQube and Tomcat" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#6B7280;fontFamily=Helvetica;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="800" height="22" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="devIcon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#1F2937;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.user;" vertex="1" parent="1">
+          <mxGeometry x="420" y="130" width="55" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="devCard" value="DEVELOPER" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#1F2937;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="485" y="142" width="180" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="devSub" value="Writes &amp; commits source code" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#6B7280;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="485" y="170" width="180" height="18" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="arr1" value="git push" style="endArrow=classic;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1F2937;fontSize=10;fontStyle=0;fontColor=#1F2937;fontFamily=Helvetica;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="devIcon" target="ghIcon">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ghIcon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#1F2937;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.source_repository;" vertex="1" parent="1">
+          <mxGeometry x="420" y="245" width="55" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ghCard" value="GITHUB" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#1F2937;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="485" y="257" width="180" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ghSub" value="Repository : EcommerceApp.git" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#6B7280;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="485" y="285" width="180" height="18" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="arr2" value="webhook trigger" style="endArrow=classic;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1F2937;fontSize=10;fontStyle=0;fontColor=#1F2937;fontFamily=Helvetica;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="ghIcon" target="vm1Box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm1Box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=2;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="360" width="700" height="200" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm1Tab" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2937;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="360" width="700" height="32" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm1EC2" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#FFFFFF;strokeColor=#1F2937;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;" vertex="1" parent="1">
+          <mxGeometry x="115" y="366" width="20" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm1Title" value="VM 1   —   JENKINS  ( CI/CD Automation Server )" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="100" y="360" width="700" height="32" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm1Note" value="hosted on EC2  •  port 8080" style="text;html=1;align=right;verticalAlign=middle;fontSize=10;fontColor=#9CA3AF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="600" y="362" width="190" height="28" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gitTool" value="GIT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#1F2937;fontFamily=Helvetica;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="140" y="420" width="170" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gitToolSub" value="Pulls latest code&#10;from repository" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;fontColor=#6B7280;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="140" y="450" width="170" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="gitStep" value="STEP 1" style="text;html=1;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#9CA3AF;fontFamily=Helvetica;letterSpacing=2;" vertex="1" parent="1">
+          <mxGeometry x="140" y="500" width="170" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mvnTool" value="MAVEN" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#1F2937;fontFamily=Helvetica;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="365" y="420" width="170" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mvnToolSub" value="Compiles project&#10;Builds EcommerceApp.war" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;fontColor=#6B7280;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="365" y="450" width="170" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mvnStep" value="STEP 2" style="text;html=1;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#9CA3AF;fontFamily=Helvetica;letterSpacing=2;" vertex="1" parent="1">
+          <mxGeometry x="365" y="500" width="170" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ansTool" value="ANSIBLE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#1F2937;fontFamily=Helvetica;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="590" y="420" width="170" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ansToolSub" value="Runs playbook&#10;Deploys WAR to Tomcat" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;fontColor=#6B7280;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="590" y="450" width="170" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ansStep" value="STEP 3" style="text;html=1;align=center;verticalAlign=middle;fontSize=9;fontStyle=1;fontColor=#9CA3AF;fontFamily=Helvetica;letterSpacing=2;" vertex="1" parent="1">
+          <mxGeometry x="590" y="500" width="170" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="flow1" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1F2937;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="gitTool" target="mvnTool">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="flow2" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1F2937;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="mvnTool" target="ansTool">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="arrAnalyze" value="analyse code" style="endArrow=classic;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1F2937;fontSize=10;fontStyle=0;fontColor=#1F2937;fontFamily=Helvetica;labelBackgroundColor=#FFFFFF;exitX=0;exitY=1;entryX=0.5;entryY=0;edgeStyle=orthogonalEdgeStyle;dashed=1;dashPattern=5 3;" edge="1" parent="1" source="vm1Box" target="vm2Box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="225" y="620"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="arrDeploy" value="ssh deploy" style="endArrow=classic;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1F2937;fontSize=10;fontStyle=0;fontColor=#1F2937;fontFamily=Helvetica;labelBackgroundColor=#FFFFFF;exitX=1;exitY=1;entryX=0.5;entryY=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="vm1Box" target="vm3Box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="620"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="vm2Box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="680" width="350" height="180" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm2Tab" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2937;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="680" width="350" height="32" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm2EC2" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#FFFFFF;strokeColor=#1F2937;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;" vertex="1" parent="1">
+          <mxGeometry x="95" y="686" width="20" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm2Title" value="VM 2   —   SONARQUBE" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="80" y="680" width="350" height="32" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm2BigIcon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#1F2937;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.codeguru;" vertex="1" parent="1">
+          <mxGeometry x="115" y="735" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm2Info" value="Code Quality Analysis&#10;Quality Gate Check&#10;Bug &amp; Vulnerability Detection" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#374151;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="195" y="735" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm2Divider" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="810" width="310" height="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm2URL" value="URL  →  http : / / VM2-IP : 9000" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#1F2937;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="80" y="820" width="350" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm3Box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2937;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="680" width="350" height="180" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm3Tab" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2937;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="470" y="680" width="350" height="32" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm3EC2" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#FFFFFF;strokeColor=#1F2937;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;" vertex="1" parent="1">
+          <mxGeometry x="485" y="686" width="20" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm3Title" value="VM 3   —   TOMCAT  ( Application Server )" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="470" y="680" width="350" height="32" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm3BigIcon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#1F2937;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.application_load_balancer;" vertex="1" parent="1">
+          <mxGeometry x="505" y="735" width="60" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm3Info" value="Hosts the live application&#10;EcommerceApp.war deployed&#10;Status : LIVE" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#374151;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="585" y="735" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm3Divider" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E5E7EB;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="810" width="310" height="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="vm3URL" value="URL  →  http : / / VM3-IP : 8080" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#1F2937;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="470" y="820" width="350" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="userIcon" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#1F2937;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.users;" vertex="1" parent="1">
+          <mxGeometry x="617" y="910" width="55" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="userLabel" value="End Users  /  Customers" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontStyle=1;fontColor=#1F2937;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="555" y="965" width="180" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="arrUser" value="HTTP request" style="endArrow=classic;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1F2937;fontSize=10;fontStyle=0;fontColor=#1F2937;fontFamily=Helvetica;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="userIcon" target="vm3Box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="botLine" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2937;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="1030" width="900" height="2" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="footL" value="Project : EcommerceApp" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontColor=#6B7280;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1045" width="200" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="footC" value="Subject : DevOps Engineering" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;fontColor=#6B7280;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1045" width="300" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="footR" value="Prepared by : [ Your Name ]" style="text;html=1;align=right;verticalAlign=middle;fontSize=10;fontColor=#6B7280;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="660" y="1045" width="200" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="footFlow" value="Workflow  :   Developer  →  GitHub  →  VM1 ( Git → Maven → Ansible )  →  VM2 ( SonarQube )  +  VM3 ( Tomcat )  →  End Users" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#9CA3AF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1075" width="820" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="footPg" value="Figure 1.0  —  CI/CD Pipeline Architecture for EcommerceApp Deployment" style="text;html=1;align=center;verticalAlign=middle;fontSize=10;fontStyle=1;fontColor=#374151;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1100" width="820" height="20" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

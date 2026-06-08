@@ -1,0 +1,17 @@
+#Jenkins server
+sudo su -
+systemctl start Jenkins
+systemctl status Jenkins
+
+
+#sonarqube server
+sudo su -
+ps -ef | grep sonar
+sudo -u sonar /opt/sonarqube/bin/linux-x86-64/sonar.sh start
+sudo -u sonar /opt/sonarqube/bin/linux-x86-64/sonar.sh status
+
+
+# app server
+sudo su -
+ps -ef | grep tomcat
+/opt/tomcat/bin/startup.sh --> if tomcat stopped
