@@ -1,0 +1,92 @@
+# =====================================================
+# 1. Move to Home Directory
+# =====================================================
+cd /home/ubuntu
+ls
+
+# =====================================================
+# 2. Verify AWS Account
+# =====================================================
+aws sts get-caller-identity
+
+# =====================================================
+# 3. Verify EKS Cluster
+# =====================================================
+eksctl get cluster
+kubectl cluster-info
+kubectl get nodes -o wide
+kubectl top nodes
+
+# =====================================================
+# 4. Verify Kubernetes Resources
+# =====================================================
+kubectl get ns
+kubectl get pods -A
+kubectl get svc -A
+kubectl get deployments -A
+
+# =====================================================
+# 5. Verify Shine Application
+# =====================================================
+kubectl get pods -n shine
+kubectl get svc -n shine
+kubectl get deployments -n shine
+
+kubectl describe deployment shine-app -n shine
+kubectl rollout status deployment shine-app -n shine
+kubectl rollout history deployment shine-app -n shine
+
+# =====================================================
+# 6. Verify MongoDB
+# =====================================================
+kubectl logs deployment/mongodb-deployment -n shine
+
+# =====================================================
+# 7. Verify Datadog Monitoring
+# =====================================================
+kubectl get pods -n datadog
+kubectl get daemonset -n datadog
+kubectl get deployment -n datadog
+
+helm list -n datadog
+
+kubectl logs -n datadog deployment/datadog-agent-cluster-agent
+
+# =====================================================
+# 8. Verify ArgoCD
+# =====================================================
+kubectl get svc -n argocd
+
+# ArgoCD Initial Admin Password
+argocd admin initial-password -n argocd
+
+# ArgoCD Login
+argocd login <ARGOCD_SERVER> \
+  --username admin \
+  --password kPONCkRgRM2Rgk5h \
+  --insecure
+
+# =====================================================
+# 9. Verify GitOps Repository
+# =====================================================
+git status
+git log --oneline -5
+
+# =====================================================
+# 10. Verify Shine Service Endpoint
+# =====================================================
+kubectl get svc -n shine
+
+# =====================================================
+# 11. Run AI Agent
+# =====================================================
+cd ~/Shine-GitOps-Project-jc/ai-agent
+
+source venv/bin/activate
+
+python ai_agent.py
+
+# =====================================================
+# 12. View Command History
+# =====================================================
+history

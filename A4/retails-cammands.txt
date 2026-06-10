@@ -1,0 +1,94 @@
+ad-an
+https://a8e80b70f1890453990f30c1570fdf6a-511242351.eu-west-1.elb.amazonaws.com
+
+Username: admin
+Password: CTrkOVIPkEoN5E1m
+
+
+
+
+
+
+
+
+# =====================================================
+# Application URL
+# =====================================================
+curl http://ac4e9eecac0ec43fda03231143ae708a-388005881.ap-southeast-1.elb.amazonaws.com
+
+# =====================================================
+# ArgoCD Login
+# =====================================================
+argocd login ae6298b64f5ef4365922d1d8867f290d-1585062024.ap-southeast-1.elb.amazonaws.com \
+  --username admin \
+  --password <ARGOCD_PASSWORD> \
+  --insecure
+
+# =====================================================
+# Verify ArgoCD
+# =====================================================
+argocd app list
+argocd cluster list
+argocd repo list
+
+# =====================================================
+# AWS & EKS Verification
+# =====================================================
+aws sts get-caller-identity
+
+eksctl get cluster
+kubectl cluster-info
+kubectl get nodes -o wide
+kubectl top nodes
+
+# =====================================================
+# Kubernetes Verification
+# =====================================================
+kubectl get ns
+kubectl get pods -A
+kubectl get svc -A
+kubectl get deployments -A
+
+# =====================================================
+# Retail Application Verification
+# =====================================================
+kubectl get pods -n retail
+kubectl get svc -n retail
+kubectl get deployments -n retail
+
+kubectl rollout status deployment/retail-app -n retail
+kubectl rollout history deployment/retail-app -n retail
+
+# =====================================================
+# MongoDB Verification
+# =====================================================
+kubectl logs deployment/mongodb-deployment -n retail
+
+# =====================================================
+# Datadog Verification
+# =====================================================
+kubectl get pods -n datadog
+kubectl get daemonset -n datadog
+kubectl get deployment -n datadog
+
+helm list -n datadog
+
+# =====================================================
+# Git Verification
+# =====================================================
+git status
+git log --oneline -5
+
+# =====================================================
+# AI Agent Verification
+# =====================================================
+cd ~/Retail-GitOps-Project/ai-agent
+source venv/bin/activate
+python ai_agent.py
+
+# =====================================================
+# History
+# =====================================================
+history
+
+argo cd admin - 0TRwNYCbJs57dmPB

@@ -1,0 +1,36 @@
+Developer pushes code
+         ↓
+GitHub Repository (Mohitind241/fss-Retail-App_kubernetes)
+         ↓
+GitHub Actions CI Pipeline (.github/workflows/ci-cd.yml)
+    - Checkout code
+    - Build Docker image
+    - Push to Docker Hub (mohitdocker241/fss-retail-app)
+    - Update k8s/deployment.yaml with new image tag
+         ↓
+Docker Hub Registry
+         ↓
+GitOps Repo (k8s/ folder in same GitHub repo)
+         ↓
+ArgoCD (watching GitHub repo for changes)
+    - Detects drift
+    - Auto-syncs to EKS
+         ↓
+Amazon EKS (ap-southeast-1 / Singapore)
+    - Namespace: fss-retail
+    - 2 nodes (t3.medium), min=1, max=2
+    - fss-retail-app Deployment (2 replicas)
+    - LoadBalancer Service
+         ↓
+Datadog Observability
+    - Metrics, Logs, Events
+    - Dashboards + Alerts
+         ↓
+AI Troubleshooting Agent
+    - Gathers K8s data
+    - Claude AI analysis
+    - Root cause + recommendations
+         ↓
+Robusta (Open Source AIOps)
+    - Event correlation
+    - Automated playbooks

@@ -1,0 +1,41 @@
+Developer commits to main branch
+         ↓
+GitHub Repo: Mohitind241/Shine-GitOps-Project
+(Branch: main | Port: 3130)
+         ↓
+GitHub Actions CI (.github/workflows/ci-cd.yml)
+  ✓ Checkout code
+  ✓ Install dependencies
+  ✓ Run tests
+  ✓ Build Docker image
+  ✓ Push to Docker Hub
+  ✓ Update k8s/deployment.yaml image tag
+         ↓
+Docker Hub: mohitdocker241/shine-gitops-app:latest
+         ↓
+GitOps Repo: k8s/ folder in GitHub
+         ↓
+ArgoCD (auto-sync, self-heal)
+  ✓ Watches main branch
+  ✓ Detects drift
+  ✓ Applies manifests
+         ↓
+Amazon EKS — fss-retail-cluster (ap-southeast-1)
+  Namespace: shine-gitops
+  ✓ shine-gitops-app Deployment (2 replicas)
+  ✓ shine-gitops-service (LoadBalancer → port 80 → 3130)
+         ↓
+Datadog Monitoring
+  ✓ Cluster metrics, Pod metrics, Logs
+  ✓ Dashboard: Shine Technologies Production
+  ✓ Monitors: CPU, Memory, Pod Restarts, Availability
+         ↓
+AI Troubleshooting Agent (shine-ai-agent.py)
+  ✓ Gathers all K8s diagnostic data
+  ✓ Claude AI root cause analysis
+  ✓ Remediation recommendations
+         ↓
+Robusta AIOps (Open Source)
+  ✓ Auto event correlation
+  ✓ Anomaly detection
+  ✓ Incident playbooks
